@@ -1,11 +1,12 @@
 
 import React from "react";
 import './../styles/App.css';
+import Tip from "./Tip";
 
 const App = () => {
   return (
     <div>
-        {/* Do not remove the main div */}
+        <Tip/>
     </div>
   )
 }
