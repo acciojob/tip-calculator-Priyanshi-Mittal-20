@@ -20,7 +20,9 @@ const Tip = () => {
   }
   function handleClick()
   {
-    setAmt(((+bill+ +tipPercentage)/(+people)).toFixed(2))
+    setAmt((
+    ((bill * tipPercentage) / 100) / people
+  ).toFixed(2))
   }
   return (
     <div>
@@ -31,7 +33,7 @@ const Tip = () => {
       <label htmlFor='peopleamt'>Number of People:</label>
       <input type="number" id="peopleamt" value={people} onChange={handlePeople} />
       <button onClick={handleClick}>Calculate</button>
-      <p id="totalTip">Tip Per Person: ${amt}</p>
+      <p id="totalTip">${amt} each</p>
     </div>
   )
 }
