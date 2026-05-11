@@ -5,6 +5,7 @@ const Tip = () => {
   const [bill,setBill]=useState(50)
   const [tipPercentage,setTipPercentage]=useState(18)
   const [people,setPeople]=useState(1)
+  const [amt,setAmt]=useState(0)
   function handleBill(e)
   {
     setBill(e.target.value)
@@ -17,6 +18,10 @@ const Tip = () => {
   {
     setPeople(e.target.value)
   }
+  function handleClick()
+  {
+    setAmt(((+bill+ +tipPercentage)/(+people)).toFixed(2))
+  }
   return (
     <div>
       <label htmlFor='billamt'>Bill:</label>
@@ -25,7 +30,8 @@ const Tip = () => {
       <input type="number" id="serviceQual" value={tipPercentage} onChange={handleTipPercentage} />
       <label htmlFor='peopleamt'>Number of People:</label>
       <input type="number" id="peopleamt" value={people} onChange={handlePeople} />
-      <p>Tip Per Person: ${((+bill+ +tipPercentage)/(+people)).toFixed(2)}</p>
+      <button onClick={handleClick}>Calculate</button>
+      <p>Tip Per Person: ${amt}</p>
     </div>
   )
 }
