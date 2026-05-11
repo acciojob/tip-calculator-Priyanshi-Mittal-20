@@ -31,7 +31,7 @@ const Tip = () => {
       <label htmlFor='peopleamt'>Number of People:</label>
       <input type="number" id="peopleamt" value={people} onChange={handlePeople} />
       <button onClick={handleClick}>Calculate</button>
-      <p>Tip Per Person: ${amt}</p>
+      <p id="totalTip">Tip Per Person: ${amt}</p>
     </div>
   )
 }
