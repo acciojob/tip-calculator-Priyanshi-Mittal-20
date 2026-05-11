@@ -21,8 +21,8 @@ const Tip = () => {
     <div>
       <label htmlFor='billamt'>Bill:</label>
       <input type="number" id="billamt" value={bill} onChange={handleBill}/>
-      <label htmlFor='tipPercentage'>Tip Percentage:</label>
-      <input type="number" id="tipPercentage" value={tipPercentage} onChange={handleTipPercentage} />
+      <label htmlFor='serviceQual'>Tip Percentage:</label>
+      <input type="number" id="serviceQual" value={tipPercentage} onChange={handleTipPercentage} />
       <label htmlFor='numberOfPeople'>Number of People:</label>
       <input type="number" id="numberOfPeople" value={people} onChange={handlePeople} />
       <p>Tip Per Person: ${((+bill+ +tipPercentage)/(+people)).toFixed(2)}</p>
