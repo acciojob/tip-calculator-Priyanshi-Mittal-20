@@ -19,8 +19,8 @@ const Tip = () => {
   }
   return (
     <div>
-      <label htmlFor='bill'>Bill:</label>
-      <input type="number" id="bill" value={bill} onChange={handleBill}/>
+      <label htmlFor='billamt'>Bill:</label>
+      <input type="number" id="billamt" value={bill} onChange={handleBill}/>
       <label htmlFor='tipPercentage'>Tip Percentage:</label>
       <input type="number" id="tipPercentage" value={tipPercentage} onChange={handleTipPercentage} />
       <label htmlFor='numberOfPeople'>Number of People:</label>
